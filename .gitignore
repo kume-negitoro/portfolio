@@ -1,3 +1,6 @@
+# Project specified files
+www/
+
 # Logs
 logs
 *.log
