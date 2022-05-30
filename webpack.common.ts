@@ -17,6 +17,14 @@ const config: Configuration = {
                 test: /\.ts$/,
                 loader: 'esbuild-loader',
                 options: {
+                    loader: 'ts',
+                    target: 'es2015',
+                },
+            },
+            {
+                test: /\.tsx$/,
+                loader: 'esbuild-loader',
+                options: {
                     loader: 'tsx',
                     target: 'es2015',
                 },
