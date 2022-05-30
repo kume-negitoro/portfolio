@@ -29,6 +29,14 @@ const config: Configuration = {
                     target: 'es2015',
                 },
             },
+            {
+                test: /\.s?css$/,
+                use: [
+                    'style-loader',
+                    { loader: 'css-loader', options: { importLoaders: 1 } },
+                    'postcss-loader',
+                ],
+            },
         ],
     },
 
