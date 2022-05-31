@@ -1,6 +1,7 @@
 import path from 'path'
 import { Configuration } from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
 
 const config: Configuration = {
     target: 'web',
@@ -51,6 +52,14 @@ const config: Configuration = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'src/index.html',
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.join(__dirname, 'public/*'),
+                    to: path.join(__dirname, 'www/'),
+                },
+            ],
         }),
     ],
 }
