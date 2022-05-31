@@ -38,11 +38,15 @@ const config: Configuration = {
                     'postcss-loader',
                 ],
             },
+            {
+                test: /.(png|jpg|gif)$/,
+                loader: 'url-loader',
+            },
         ],
     },
 
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+        extensions: ['.ts', '.tsx', '.js', '.jsx', '.png', '.jpg', '.gif'],
         modules: [
             path.join(__dirname, 'node_modules'),
             path.join(__dirname, 'src'),

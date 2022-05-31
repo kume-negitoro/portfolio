@@ -1,7 +1,8 @@
 import React from 'react'
+import Profile from './Profile'
 
 const App = () => {
-    return <p className="text-6xl">Hello, World!</p>
+    return <Profile />
 }
 
 export default App
