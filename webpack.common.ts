@@ -5,7 +5,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 const config: Configuration = {
     target: 'web',
 
-    entry: path.join(__dirname, 'src/app.tsx'),
+    entry: path.join(__dirname, 'src/index.tsx'),
     output: {
         filename: 'bundle.js',
         path: path.join(__dirname, 'www'),
