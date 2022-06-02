@@ -39,14 +39,23 @@ const config: Configuration = {
                 ],
             },
             {
-                test: /.(png|jpg|gif)$/,
+                test: /.(png|jpg|gif|svg)$/,
                 loader: 'url-loader',
             },
         ],
     },
 
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.jsx', '.png', '.jpg', '.gif'],
+        extensions: [
+            '.ts',
+            '.tsx',
+            '.js',
+            '.jsx',
+            '.png',
+            '.jpg',
+            '.gif',
+            '.svg',
+        ],
         modules: [
             path.join(__dirname, 'node_modules'),
             path.join(__dirname, 'src'),
