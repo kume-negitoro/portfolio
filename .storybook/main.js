@@ -19,5 +19,21 @@ module.exports = {
   framework: "@storybook/react",
   core: {
     "builder": "@storybook/builder-webpack5"
+  },
+  webpackFinal: (config) => {
+    const rules = config.module.rules
+    
+    const fileLoaderRule = rules.find((rule) => rule.test && rule.test.test('.svg'))
+    fileLoaderRule.exclude = /.svg$/
+
+    rules.push({
+      test: /.svg$/,
+      loader: '@svgr/webpack',
+      options: {
+          typescript: true,
+      },
+    })
+
+    return config
   }
 }
