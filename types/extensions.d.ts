@@ -16,6 +16,6 @@ declare module '*.gif' {
 }
 
 declare module '*.svg' {
-    const value: any
+    const value: () => JSX.Element
     export = value
 }

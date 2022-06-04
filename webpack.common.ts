@@ -45,7 +45,10 @@ const config: Configuration = {
             },
             {
                 test: /.svg$/,
-                type: 'asset/inline',
+                loader: '@svgr/webpack',
+                options: {
+                    typescript: true,
+                },
             },
         ],
     },
