@@ -10,6 +10,7 @@ const config: Configuration = {
     output: {
         filename: 'bundle.js',
         path: path.join(__dirname, 'www'),
+        assetModuleFilename: 'images/[hash][ext][query]',
     },
 
     module: {
@@ -39,8 +40,12 @@ const config: Configuration = {
                 ],
             },
             {
-                test: /.(png|jpg|gif|svg)$/,
-                loader: 'url-loader',
+                test: /.(png|jpg|gif)$/,
+                type: 'asset/resource',
+            },
+            {
+                test: /.svg$/,
+                type: 'asset/inline',
             },
         ],
     },
