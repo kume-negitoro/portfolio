@@ -1,8 +1,9 @@
 import React from 'react'
 import Profile from './Profile'
+import ProfilePage from './ProfilePage'
 
 const App = () => {
-    return <Profile />
+    return <ProfilePage />
 }
 
 export default App
