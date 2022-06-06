@@ -50,6 +50,10 @@ const config: Configuration = {
                     typescript: true,
                 },
             },
+            {
+                test: /.md$/,
+                type: 'asset/source',
+            },
         ],
     },
 

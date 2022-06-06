@@ -19,3 +19,8 @@ declare module '*.svg' {
     const value: () => JSX.Element
     export = value
 }
+
+declare module '*.md' {
+    const value: string
+    export = value
+}
