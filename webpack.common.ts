@@ -1,5 +1,5 @@
 import path from 'path'
-import { Configuration } from 'webpack'
+import { Configuration, ProvidePlugin } from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 
@@ -72,9 +72,15 @@ const config: Configuration = {
             path.join(__dirname, 'node_modules'),
             path.join(__dirname, 'src'),
         ],
+        fallback: {
+            buffer: require.resolve('buffer'),
+        },
     },
 
     plugins: [
+        new ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'],
+        }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
         }),
