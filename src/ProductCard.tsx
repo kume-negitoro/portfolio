@@ -65,7 +65,13 @@ const ProductCard = (props: ProductCardProps) => {
                             {urls.map((url: string, i: number) => {
                                 return (
                                     <li key={i}>
-                                        <a href={url}>{`参考リンク${i + 1}`}</a>
+                                        <span>{`参考リンク${i + 1}: `}</span>
+                                        <a
+                                            href={url}
+                                            className="text-blue-600 visited:text-purple-600"
+                                        >
+                                            {url}
+                                        </a>
                                     </li>
                                 )
                             })}
