@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import matter from 'gray-matter'
+import { useInView } from 'react-intersection-observer'
+
 import Profile from './Profile'
 import SkillCard from './SkillCard'
 import ProductCard from './ProductCard'
+import { FadeIn } from './functional/FadeIn'
 
 import { list as skillList } from './skills'
 import intro from './informations/introduction.md'
@@ -16,6 +19,11 @@ const shooting_xData = matter(shooting_x)
 const demomoniData = matter(demomoni)
 
 const ProfilePage = () => {
+    const {
+        ref: popropRef,
+        inView: popropInView,
+        entry: popropEntry,
+    } = useInView()
     return (
         <>
             <Profile />
@@ -55,24 +63,24 @@ const ProfilePage = () => {
                     <section className="pt-5 pb-5">
                         <h2 className="text-2xl text-center">製作物たち</h2>
                         <article>
-                            <div className="p-5">
+                            <FadeIn duration={500}>
                                 <ProductCard
                                     content={popropData.content}
                                     {...(popropData.data as any)}
                                 />
-                            </div>
-                            <div className="p-5">
+                            </FadeIn>
+                            <FadeIn duration={500}>
                                 <ProductCard
                                     content={shooting_xData.content}
                                     {...(shooting_xData.data as any)}
                                 />
-                            </div>
-                            <div className="p-5">
+                            </FadeIn>
+                            <FadeIn duration={500}>
                                 <ProductCard
                                     content={demomoniData.content}
                                     {...(demomoniData.data as any)}
                                 />
-                            </div>
+                            </FadeIn>
                         </article>
                     </section>
                 </div>
