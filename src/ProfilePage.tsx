@@ -9,9 +9,11 @@ import { list as skillList } from './skills'
 import intro from './informations/introduction.md'
 import poprop from './informations/poprop.md'
 import shooting_x from './informations/shooting-x.md'
+import demomoni from './informations/demomoni.md'
 
 const popropData = matter(poprop)
 const shooting_xData = matter(shooting_x)
+const demomoniData = matter(demomoni)
 
 const ProfilePage = () => {
     return (
@@ -63,6 +65,12 @@ const ProfilePage = () => {
                                 <ProductCard
                                     content={shooting_xData.content}
                                     {...(shooting_xData.data as any)}
+                                />
+                            </div>
+                            <div className="p-5">
+                                <ProductCard
+                                    content={demomoniData.content}
+                                    {...(demomoniData.data as any)}
                                 />
                             </div>
                         </article>
