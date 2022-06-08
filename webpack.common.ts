@@ -87,8 +87,9 @@ const config: Configuration = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.join(__dirname, 'public/*'),
+                    from: '*',
                     to: path.join(__dirname, 'www/'),
+                    context: path.join(__dirname, 'public/'),
                 },
             ],
         }),
