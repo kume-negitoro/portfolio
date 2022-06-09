@@ -22,6 +22,10 @@ import mayorsaward from './informations/mayors-award.md'
 import driverslicense from './informations/drivers-license.md'
 import fundamentalinformation from './informations/fundamental-information.md'
 
+import popropImage from './images/poprop.png'
+import shootingxImage from './images/shooting-x.png'
+import demomoniImage from './images/demomoni.png'
+
 const popropData = matter(poprop)
 const shooting_xData = matter(shooting_x)
 const demomoniData = matter(demomoni)
@@ -83,18 +87,21 @@ const ProfilePage = () => {
                             <FadeIn duration={500}>
                                 <ProductCard
                                     content={popropData.content}
+                                    image={<img src={popropImage}></img>}
                                     {...(popropData.data as any)}
                                 />
                             </FadeIn>
                             <FadeIn duration={500}>
                                 <ProductCard
                                     content={shooting_xData.content}
+                                    image={<img src={shootingxImage}></img>}
                                     {...(shooting_xData.data as any)}
                                 />
                             </FadeIn>
                             <FadeIn duration={500}>
                                 <ProductCard
                                     content={demomoniData.content}
+                                    image={<img src={demomoniImage}></img>}
                                     {...(demomoniData.data as any)}
                                 />
                             </FadeIn>

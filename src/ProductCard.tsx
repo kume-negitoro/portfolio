@@ -28,15 +28,17 @@ const ProductCard = (props: ProductCardProps) => {
         devLibraries,
         ownJob,
         urls,
+        image,
     } = props
     return (
         <div className="p-5 rounded-lg drop-shadow-lg bg-white overflow-hidden">
             <p className="text-center font-semibold text-xl p-2">
                 {title} ({type})
             </p>
-            <div className="p-5">
+            <div className="pt-5">
                 <ReactMarkdown>{content}</ReactMarkdown>
             </div>
+            <div className="p-5">{image}</div>
             <table>
                 <tr>
                     <th>開発期間</th>
