@@ -35,7 +35,7 @@ const ProductCard = (props: ProductCardProps) => {
             <p className="text-center font-semibold text-xl p-2">
                 {title} ({type})
             </p>
-            <div className="pt-5">
+            <div className="markdown pt-5">
                 <ReactMarkdown>{content}</ReactMarkdown>
             </div>
             <div className="p-5">{image}</div>
