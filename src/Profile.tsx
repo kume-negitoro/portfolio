@@ -18,6 +18,12 @@ const Profile = () => {
                     </div>
                     <div className="flex-1 grid place-items-center">
                         <p className="text-center">はじめまして！</p>
+                        <div>
+                            <span>E-Mail: </span>
+                            <span className="underline">
+                                kume.negitoro[at]gmail.com
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
