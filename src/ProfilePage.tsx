@@ -46,7 +46,7 @@ const ProfilePage = () => {
     return (
         <>
             <Profile />
-            <div className="flex">
+            <div className="flex bg-[#d9e8f5]">
                 <div className="flex-initial basis-1/4"></div>
                 <div className="flex-initial basis-1/2 pt-5">
                     <section className="pt-5 pb-5">
@@ -55,7 +55,7 @@ const ProfilePage = () => {
                             <ReactMarkdown>{intro}</ReactMarkdown>
                         </div>
                     </section>
-                    <hr />
+                    <hr className="h-0.5 bg-[#304264]" />
                     <section className="pt-5 pb-5">
                         <h2 className="text-2xl text-center">
                             普段利用している技術
@@ -80,7 +80,7 @@ const ProfilePage = () => {
                             </ul>
                         </div>
                     </section>
-                    <hr />
+                    <hr className="h-0.5 bg-[#304264]" />
                     <section className="pt-5 pb-5">
                         <h2 className="text-2xl text-center">製作物たち</h2>
                         <article>
@@ -107,7 +107,7 @@ const ProfilePage = () => {
                             </FadeIn>
                         </article>
                     </section>
-                    <hr />
+                    <hr className="h-0.5 bg-[#304264]" />
                     <section className="pt-5 pb-5">
                         <h2 className="text-2xl text-center">受賞歴</h2>
                         <div>
@@ -138,7 +138,7 @@ const ProfilePage = () => {
                             </FadeIn>
                         </div>
                     </section>
-                    <hr />
+                    <hr className="h-0.5 bg-[#304264]" />
                     <section className="pt-5 pb-5">
                         <h2 className="text-2xl text-center">資格</h2>
                         <div>

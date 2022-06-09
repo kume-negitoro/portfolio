@@ -3,7 +3,7 @@ import profile from './images/profile.png'
 
 const Profile = () => {
     return (
-        <div className="flex  bg-pink-100">
+        <div className="flex  bg-[#91bed4]">
             <div className="flex-1"></div>
             <div className="flex flex-auto">
                 <img
