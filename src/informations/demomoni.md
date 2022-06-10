@@ -3,7 +3,7 @@ title: でももに！
 type: Androidプリケーション
 devTerm: 約1年間
 devMembers: 6人
-devLanguages: Kotlin
+devLanguages: Kotlin, Swift
 devLibraries: AltBeacon, Gson, CardView, Glide, etc.
 ownJob: プロダクトオーナー
 urls:
