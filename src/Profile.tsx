@@ -1,5 +1,6 @@
 import React from 'react'
 import profile from './images/profile.png'
+import Github from 'devicon/icons/github/github-original.svg'
 
 const Profile = () => {
     return (
@@ -18,6 +19,11 @@ const Profile = () => {
                     </div>
                     <div className="flex-1 grid place-items-center">
                         <p className="text-center">はじめまして！</p>
+                        <div className="w-8">
+                            <a href="https://github.com/kume-negitoro">
+                                <Github></Github>
+                            </a>
+                        </div>
                         <div>
                             <span>E-Mail: </span>
                             <span className="underline">
