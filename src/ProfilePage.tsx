@@ -21,10 +21,12 @@ import bizsysd2020 from './informations/2020-enpit-bizsysd.md'
 import mayorsaward from './informations/mayors-award.md'
 import driverslicense from './informations/drivers-license.md'
 import fundamentalinformation from './informations/fundamental-information.md'
+import history from './informations/history.md'
 
 import popropImage from './images/poprop.png'
 import shootingxImage from './images/shooting-x.png'
 import demomoniImage from './images/demomoni.png'
+import HistoryCard from './HistoryCard'
 
 const popropData = matter(poprop)
 const shooting_xData = matter(shooting_x)
@@ -36,6 +38,7 @@ const bizsysd2020Data = matter(bizsysd2020)
 const mayorsawardData = matter(mayorsaward)
 const driverslicenseData = matter(driverslicense)
 const fundamentalIinformationData = matter(fundamentalinformation)
+const historyData = matter(history)
 
 const ProfilePage = () => {
     const {
@@ -134,6 +137,19 @@ const ProfilePage = () => {
                             <FadeIn duration={500}>
                                 <AchievementCard
                                     {...(mayorsawardData.data as any)}
+                                />
+                            </FadeIn>
+                        </div>
+                    </section>
+                    <hr className="h-0.5 bg-[#304264]" />
+                    <section className="pt-5 pb-5">
+                        <h2 className="text-2xl text-center">経歴</h2>
+                        <div>
+                            <FadeIn duration={500}>
+                                <HistoryCard
+                                    experiences={
+                                        historyData.data.experiences as any
+                                    }
                                 />
                             </FadeIn>
                         </div>
